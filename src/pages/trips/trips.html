@@ -1,0 +1,13 @@
+<ion-content *ngIf="!flag" padding text-center class="vertical-align-content">
+	<div>
+		<h2>What will be your first adventure?</h2>
+		<p id="bicycle">
+			<ion-icon name="bicycle"></ion-icon>
+		</p>
+		<button ion-button outline color="main" (click)="startExplore()">Start Explore</button>
+	</div>
+</ion-content>
+<ion-content *ngIf="flag">
+	<h2>True</h2>
+</ion-content>
+

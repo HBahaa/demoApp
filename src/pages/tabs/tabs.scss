@@ -1,0 +1,6 @@
+page-tabs {
+	.tabs .tab-button[aria-selected="true"],
+	.tabs .tab-button[aria-selected="true"] .tab-button-icon{
+		color: #007278;
+	}
+}

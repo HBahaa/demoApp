@@ -1,0 +1,128 @@
+<ion-content>
+  <ion-simple-wizard [(step)]="step" [showSteps]="false" (finish)="onFinish()" [finishIcon]="'done-all'" [(stepCondition)]="stepCondition">
+
+    <ion-wizard-step>
+      <ion-card class="card-wizard">
+        <ion-card-header>
+          <button ion-button clear id="close" color="light" (click)="exitApp()" icon-only><ion-icon name="close"></ion-icon></button>
+          <button ion-button clear  class="login" color="light" (click)="presentLoginModal()">Login</button>
+        </ion-card-header>
+        <ion-icon class="card-wizard-icon" name="ionic" color="light"></ion-icon>
+        <ion-card-content>
+          <ion-card-title>
+            Welcome to Airbnb
+          </ion-card-title>
+          <button ion-button block color="light" round icon-start large class="fbIcon" >
+            <ion-icon name="logo-facebook"></ion-icon>Continue with Facebook
+          </button>
+          <button ion-button block color="light" large round outline (click)="toggle()">
+            Create Account
+          </button>
+          <button ion-button block color="light" large round outline>More Options</button>
+          <!-- <p id="note">
+            By tapping Continue
+          </p> -->
+        </ion-card-content>
+      </ion-card>
+    </ion-wizard-step>
+
+    <ion-wizard-step>
+      <ion-card class="card-wizard">
+        <ion-card-content>
+          <ion-card-title class="cardTitle">
+            What is your name?
+          </ion-card-title>
+          <!-- <form> -->
+            <ion-list>
+              <ion-item>
+                <ion-label stacked>First Name</ion-label>
+                <ion-input name="frist" (change)="getName()" [(ngModel)]="first" type="text"></ion-input>
+              </ion-item>
+              <ion-item>
+                <ion-label stacked>Last Name</ion-label>
+                <ion-input name="last" (change)="getName()" [(ngModel)]="last" type="text"></ion-input>
+              </ion-item>
+            </ion-list>
+          <!-- </form> -->
+        </ion-card-content>
+      </ion-card>
+    </ion-wizard-step>
+
+    <ion-wizard-step>
+      <ion-card class="card-wizard">
+        <ion-card-content>
+          <ion-card-title class="cardTitle">
+            And, your email?
+          </ion-card-title>
+          <ion-list>
+            <ion-item>
+              <ion-label stacked>Email Address</ion-label>
+              <ion-input (input)="textChange($event)" type="email"></ion-input>
+            </ion-item>
+            <ion-item id="tglbtn">
+              <ion-toggle checked="false"></ion-toggle>
+              <ion-label>I'd like to receive promotional communications, incluuding discounts, Surveys, inspirations, and love from Airbnb</ion-label>
+            </ion-item>
+          </ion-list>
+
+        </ion-card-content>
+      </ion-card>
+    </ion-wizard-step>
+
+    <ion-wizard-step>
+      <ion-card class="card-wizard">
+        <ion-card-content>
+          <ion-card-title class="cardTitle">
+            Create a password
+          </ion-card-title>
+          <p>
+            Your password must contains 
+          </p>
+          <ion-list>
+            <ion-item>
+              <ion-label stacked>Password</ion-label>
+              <ion-input (input)="textChange($event)" type="password"></ion-input>
+            </ion-item>
+          </ion-list>
+        </ion-card-content>
+      </ion-card>
+    </ion-wizard-step>
+
+    <ion-wizard-step>
+      <ion-card class="card-wizard">
+        <ion-card-content>
+          <ion-card-title class="cardTitle">
+            When is your birthday?
+          </ion-card-title>
+          <p>
+            You must be at least 18 years old to use Airbnb
+          </p>
+          <ion-list>
+            <ion-item>
+              <ion-label>Start Date</ion-label>
+              <ion-datetime displayFormat="MMM DD YYYY" (ionChange)="datetimeChange()" [(ngModel)]="month"></ion-datetime>
+            </ion-item>
+          </ion-list>
+        </ion-card-content>
+      </ion-card>
+    </ion-wizard-step>
+
+    <ion-wizard-step>
+      <ion-card class="card-wizard" id="finalStep">
+        <ion-card-content>
+          <ion-card-title>
+            before you join
+          </ion-card-title>
+          <p>
+            Whether it's your first time using Airbnb or you're one of our original travelers, please commit to respecting and including everyonein the Airbnb community.
+          </p>
+          <button ion-button round (click)="acceptTerms()">Accept</button>
+          <button ion-button round outline (click)="declineTerms()">Decline</button>
+
+        </ion-card-content>
+      </ion-card>
+    </ion-wizard-step>
+
+  </ion-simple-wizard>
+
+</ion-content>

@@ -1,0 +1,32 @@
+<ion-header>
+
+  <button ion-button clear id="close" color="main" (click)="dismissLoginModal()" icon-only><ion-icon name="close"></ion-icon></button>
+
+</ion-header>
+
+
+<ion-content padding>
+	<form #loginForm="ngForm" (ngSubmit)="userLogin()">
+      <ion-row>
+        <ion-col>
+          <h3>Login</h3>
+          <ion-list inset>
+            <ion-item>
+            	<ion-label stacked>Name</ion-label>
+              	<ion-input type="text"></ion-input>
+            </ion-item>
+
+            <ion-item>
+              <ion-label stacked>Password</ion-label>
+              <ion-input type="password"></ion-input>
+            </ion-item>
+
+            <button ion-button type="submit" color="main" block [disabled]="!loginForm.form.valid">
+              <ion-icon name="log-in"></ion-icon> login
+          	</button>
+          </ion-list>
+        </ion-col>
+      </ion-row>
+    </form>
+	
+</ion-content>

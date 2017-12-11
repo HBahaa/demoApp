@@ -1,0 +1,13 @@
+<ion-content id="saved" padding>
+	<div *ngIf="checkSavedList()">
+		<h2>Saved</h2>
+		<p>
+			when you see something you like, tap on the heart to save it.
+		</p>
+		<button ion-button clear color="main" (click)="startExplore()">Start Explore</button>
+	</div>
+	<div *ngIf="flag">
+		<h2>Saved</h2>
+	</div>
+
+</ion-content>

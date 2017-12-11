@@ -1,0 +1,26 @@
+page-trips {
+	.vertical-align-content > *
+	{
+		display: flex!important;
+		align-content: center!important;
+		align-items: center!important;
+	}
+	div{
+		h2{
+			color: #555; 
+		}
+
+		p#bicycle{
+			background-color: #007278;
+			width: 100px;
+			height: 100px;
+			text-align: center;
+			line-height: 100px;
+			font-size: 40px;
+			border-radius: 50%;
+			color: #fff;
+			margin: 30px auto;
+		}
+	}
+	
+}

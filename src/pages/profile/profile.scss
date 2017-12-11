@@ -1,0 +1,28 @@
+page-profile {
+	.item#pic{
+		margin: 20px 0 40px;
+		border-bottom:0px;
+
+		.item-inner{
+			border-bottom: 0px;
+		}
+		p{
+			color: #999l
+		}
+		ion-avatar img{
+			width: 60px;
+			height: 60px;
+		}
+	}
+	.item:not(#pic):first-child{
+		border-top: 1px solid #dedede;
+	}
+	.item{
+		color: #555;
+		border-bottom: 1px solid #dedede;
+		padding: 7px 0;
+	}
+	.list .item-block .item-inner{
+		border: 0px;
+	}
+}
