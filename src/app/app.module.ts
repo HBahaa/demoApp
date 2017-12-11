@@ -1,12 +1,12 @@
-import { NgModule, ErrorHandler } from '@angular/core';
-import { IonicApp, IonicModule, IonicErrorHandler } from 'ionic-angular';
-import { MyApp } from './app.component';
-import { BrowserModule } from '@angular//platform-browser';
-import { HttpModule } from '@angular/http';
-import { StatusBar } from '@ionic-native/status-bar';
+import { BrowserModule } from '@angular/platform-browser';
+import { ErrorHandler, NgModule } from '@angular/core';
+import { IonicApp, IonicErrorHandler, IonicModule } from 'ionic-angular';
 import { SplashScreen } from '@ionic-native/splash-screen';
+import { StatusBar } from '@ionic-native/status-bar';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { HttpModule } from '@angular/http';
 
+import { MyApp } from './app.component';
 import { HomePage } from '../pages/home/home';
 import { IonSimpleWizard } from '../pages/ion-simple-wizard/ion-simple-wizard.component';
 import { IonSimpleWizardStep } from '../pages/ion-simple-wizard/ion-simple-wizard.step.component';
@@ -17,6 +17,7 @@ import { InboxPage } from '../pages/inbox/inbox';
 import { TripsPage } from '../pages/trips/trips';
 import { ExplorePage } from '../pages/explore/explore';
 import { LoginPage } from '../pages/login/login';
+import { DetailsPage } from '../pages/details/details';
 
 @NgModule({
   declarations: [
@@ -28,6 +29,7 @@ import { LoginPage } from '../pages/login/login';
     TripsPage,
     ExplorePage,
     LoginPage,
+    DetailsPage,
     HomePage,
     IonSimpleWizard,
     IonSimpleWizardStep
@@ -48,9 +50,13 @@ import { LoginPage } from '../pages/login/login';
     TripsPage,
     ExplorePage,
     LoginPage,
+    DetailsPage,
     HomePage
   ],
-  providers: [StatusBar,
-    SplashScreen,{ provide: ErrorHandler, useClass: IonicErrorHandler }]
+  providers: [
+    StatusBar,
+    SplashScreen,
+    {provide: ErrorHandler, useClass: IonicErrorHandler}
+  ]
 })
-export class AppModule { }
+export class AppModule {}

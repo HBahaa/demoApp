@@ -1,12 +1,32 @@
 <ion-header>
 
-  <ion-navbar>
-    <ion-title>details</ion-title>
-  </ion-navbar>
+	<button ion-button clear color="main" (click)="backToExplore()" icon-only>
+		<ion-icon name="arrow-round-back"></ion-icon>
+	</button>
 
 </ion-header>
 
 
 <ion-content padding>
+
+	<ion-card>
+		<img src="assets/img/restaurant.jpeg" />
+		<ion-card-content>
+		    <ion-card-title>
+		    	Nine Inch Nails Live
+	      	</ion-card-title>
+		    <p>
+		      The most popular industrial group ever
+		    </p>
+		    <button ion-button clear small icon-start color="main">
+				<ion-icon name='star'></ion-icon>
+				<ion-icon name='star'></ion-icon>
+				<ion-icon name='star'></ion-icon>
+				<ion-icon name='star'></ion-icon>
+				<ion-icon name='star'></ion-icon> 
+				<label>Reviews</label>
+			</button>
+	    </ion-card-content>
+	</ion-card>
 
 </ion-content>

@@ -6,10 +6,11 @@ page-explore {
 			border: 1px solid #888;
 		    background: #fff;
 		    border-radius: 5px;
-
 		}
 	}
-
+	.content{
+		margin-bottom: 20px;
+	}
 	.button{
 		box-shadow:none;
 	}
@@ -25,7 +26,7 @@ page-explore {
 	}
 
 	ion-slides{
-		height: 45%;
+		height: 42%;
 	}
 	.slide-zoom {
 	    height: 100%;

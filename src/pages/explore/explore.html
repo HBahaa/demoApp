@@ -1,18 +1,12 @@
 <ion-header>
-  <ion-searchbar *ngIf="!flag" (ionInput)="getItems($event)"></ion-searchbar>
-  <button *ngIf="flag" ion-button clear (click)="backToExplore()" icon-only>
-  	<ion-icon name="arrow-round-back"></ion-icon></button>
-  <!-- <ion-item>
-	<ion-input type="text" value="experiences.filter" Readonly></ion-input>
-  </ion-item> -->
+  <ion-searchbar (ionInput)="getItems($event)"></ion-searchbar>
   <ion-buttons start>
-      <button ion-button id="dates" small color="light" (click)="setDate()">All Dates</button>
-      <button ion-button color="light" small (click)="setGuests()">Guests</button>
-      <button ion-button color="light" small *ngIf="flag" (click)="filters()">Filters</button>
+      <button ion-button id="dates" color="light" (click)="setDate()">All Dates</button>
+      <button ion-button color="light" (click)="setGuests()">Guests</button>
     </ion-buttons>
 </ion-header>
 
-<ion-content *ngIf="!flag" padding>
+<ion-content padding>
 	<h3>Explore Airbnb</h3>
 	<ion-slides pager>
 	    <ion-slide *ngFor="let slide of slides"  (click)="someFunction()">
@@ -131,26 +125,4 @@
 	</ion-row>
 
 
-</ion-content>
-<ion-content *ngIf="flag" padding>
-	<h4>heba</h4>
-	<ion-card>
-		<img src="assets/img/restaurant.jpeg" />
-		<ion-card-content>
-		    <ion-card-title>
-		    	Nine Inch Nails Live
-	      	</ion-card-title>
-		    <p>
-		      The most popular industrial group ever
-		    </p>
-		    <button ion-button clear small icon-start color="main">
-				<ion-icon name='star'></ion-icon>
-				<ion-icon name='star'></ion-icon>
-				<ion-icon name='star'></ion-icon>
-				<ion-icon name='star'></ion-icon>
-				<ion-icon name='star'></ion-icon> 
-				<label>Reviews</label>
-			</button>
-	    </ion-card-content>
-	</ion-card>
 </ion-content>

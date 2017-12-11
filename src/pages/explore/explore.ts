@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
-
+import { DetailsPage } from '../details/details';
 
 @IonicPage()
 @Component({
@@ -8,7 +8,6 @@ import { IonicPage, NavController, NavParams } from 'ionic-angular';
   templateUrl: 'explore.html',
 })
 export class ExplorePage {
-	flag:any = false;
 
   	slides = [
 	    {
@@ -41,16 +40,11 @@ export class ExplorePage {
 	}
 
 	moreDetails(){
-		
+		this.navCtrl.setRoot(DetailsPage);
 	}
 
 	someFunction(){
-		this.flag = true;
-		return this.flag;
+		
 	}
-	backToExplore(){
-		this.flag = false;
-		return this.flag;
-	}
-
+	
 }

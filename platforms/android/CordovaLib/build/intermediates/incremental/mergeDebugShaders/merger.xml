@@ -1,2 +1,2 @@
 <?xml version="1.0" encoding="utf-8"?>
-<merger version="3"><dataSet config="main"><source path="/home/heba/Downloads/ionic2Apps/ionic2-simple-conditional-wizard/platforms/android/CordovaLib/src/main/shaders"/></dataSet><dataSet config="debug"><source path="/home/heba/Downloads/ionic2Apps/ionic2-simple-conditional-wizard/platforms/android/CordovaLib/src/debug/shaders"/></dataSet></merger>
+<merger version="3"><dataSet config="main"><source path="/home/heba/Downloads/ionic2Apps/demoApp/platforms/android/CordovaLib/src/main/shaders"/></dataSet><dataSet config="debug"><source path="/home/heba/Downloads/ionic2Apps/demoApp/platforms/android/CordovaLib/src/debug/shaders"/></dataSet></merger>
